@@ -70,6 +70,8 @@ nav {
   transition: all 0.5s linear;
   z-index: 100;
 }
+
+
 /* about  */
 .aboutdiv {
   transform: translateY(40px);
