@@ -15,6 +15,7 @@
       <!-- owl carousel css  -->
       <link rel="stylesheet" href="./css/owl.carousel.css">
       <link rel="stylesheet" href="./css/owl.theme.default.css">
+      <link rel="stylesheet" href="./css/select2.min.css">
       <title>one page site</title>
    </head>
    <body>
@@ -124,41 +125,63 @@
             </div>
             <div class="table-responsive">
 
-               <table class="table my-3 table-borderless table-danger  caption-top ">
+               <table class="table my-3 table-borderless table-dark table-striped caption-top ">
                   <caption>Example of table</caption>
-               <thead class="table-light">
-                  <tr>
-                     <th scope="col">No.</th>
-                     <th scope="col">Name</th>
-                     <th scope="col">Last</th>
-                     <th scope="col" class="table-active">City</th>
-                   <th scope="col">Email</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <th scope="row">1</th>
-                     <td>Mark</td>
-                     <td>Otto</td>
-                     <td>London</td>
-                     <td>mark194@gmail.com</td>
-                  </tr>
-                  <tr>
-                     <th scope="row">2</th>    
-                     <td colspan="2">Larry the Bird</td>
-                     <td>Amsterdam</td>
-                     <td>Birdlar735@gmail.com</td>
-                  </tr>
-                  <tr>
-                     <th scope="row">3</th>
-                     <td>Jacob</td>
-                     <td>Thornton</td>
-                     <td>Paris</td>
-                     <td>JacobThor399@gmail.com</td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
+                  <thead class="table-light">
+                     <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Last</th>
+                        <th scope="col" class="table-active">City</th>
+                     <th scope="col">Email</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>London</td>
+                        <td>mark194@gmail.com</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>Paris</td>
+                        <td>JacobThor399@gmail.com</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>Amsterdam</td>
+                        <td>Birdlar735@gmail.com</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <div class="py-5 d-flex justify-content-between flex-wrap selectOption">
+               <select name="state" class="myselect "   style="width:45%;" id="">
+                  <optgroup label="First Group">
+                     <option value="ahe">Ahmedabad</option>
+                     <option value="mum">Mumbai</option>
+                     <option value="kol">Kolkata</option>
+                  </optgroup>
+                  <optgroup label="Second Group">
+                     <option value="che">Chennai</option>
+                     <option value="del">Delhi</option>
+                     <option value="pun">Punjab</option>
+                  </optgroup>
+               </select>
+               <select name="state" class="myselect-Multi"  multiple="multiple" style="width:45%" id="">
+                  <option value="ahe">Ahmedabad</option>
+                  <option value="mum">Mumbai</option>
+                  <option value="che">Chennai</option>
+                  <option value="del">Delhi</option>
+                  <option value="pun"  disabled="disabled">Punjab</option>
+                  <option value="kol">Kolkata</option>
+               </select>
+            </div>
          </div>
       </section>
       <!-- about section ends here  -->
@@ -272,9 +295,9 @@
       <!-- do contact ends here -->
       <!-- social media icons starts here -->
       <div class="social-media-wrapper d-flex flex-column position-fixed start-0 top-50" >
-         <a href="#"><img src="./images/instagram.png" alt="instagram"></a>
-         <a href="#"><img src="./images/twitter.png" alt="twitter"></a>
          <a href="#"><img src="./images/facebook.png" alt="facebook"></a>
+         <a href="#"><img src="./images/twitter.png" alt="twitter"></a>
+         <a href="#"><img src="./images/instagram.png" alt="instagram"></a>
          <a href="#"><img src="./images/linkedin.png" alt="linkedin"></a>
       </div>
       <!-- social media icons ends here -->
@@ -331,26 +354,26 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#">Blog Posts</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#" data-bs-toggle="modal" data-bs-target="#pricingModal">Pricing</a></li>
                         <li><a href="#" data-bs-toggle="modal" data-bs-target="#faqModal">FAQs</a></li>
+                        <li><a href="#" data-bs-toggle="modal" data-bs-target="#pricingModal">Pricing</a></li>
                      </ul>
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-6 col-6">
                      <h5 class="fw-bold ">Support</h5>
                      <ul class="list-unstyled">
-                        <li><a href="#">Learning center</a></li>
                         <li><a href="#contact">Contact us</a></li>
                         <li><a href="#">Create account</a></li>
+                        <li><a href="#">Learning center</a></li>
                         <li><a href="#" data-bs-toggle="modal" data-bs-target="#teamModal">Team</a></li>
                      </ul>
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-6 col-6">
                      <h5 class="fw-bold ">Product</h5>
                      <ul class="list-unstyled">
-                        <li><a href="#">Sale</a></li>
                         <li><a href="#">Market</a></li>
-                        <li><a href="#">Resources</a></li>
                         <li><a href="#">VIP</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Sale</a></li>
                         <li><a href="#">Admin UI</a></li>
                      </ul>
                   </div>
@@ -625,7 +648,7 @@
       <!-- team modal ends here  -->
       <!-- scroll up btn  -->
       <button class="btn scrollbtn position-fixed bottom-0 end-0 p-0 me-4 mb-4 " style="display: none;">
-      <i class="fas fa-arrow-up fs-4 "></i>
+       <i class="fas fa-arrow-up fs-4 "></i>
       </button>
       <!-- bootstrap script  -->
       <script src="./js/bootstrap.bundle.js"></script>
@@ -635,6 +658,9 @@
       <script src="./js/fontawesome.js"></script>
       <!-- owl carousel script  -->
       <script src="./js/owl.carousel.js"></script>
+      <!-- selects js  -->
+      <script src="./js/select2.min.js"></script>
+
       <!-- custom script  -->
       <script src="./js/script.js"></script>
    </body>
