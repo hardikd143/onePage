@@ -54,6 +54,7 @@ img {
 }
 input:focus,
 textarea:focus {
+  outline: none !important;
   box-shadow: none !important;
   border-color: #2e2e2e !important;
 }
@@ -74,6 +75,10 @@ nav {
 .aboutdiv {
   transform: translateY(40px);
   transition: all 0.5s linear;
+}
+
+.tox-statusbar{
+  display: none !important;
 }
 /* services  */
 #services .card {
