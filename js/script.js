@@ -37,21 +37,6 @@ $(document).ready(() => {
     }
   });
 
-  // this function hide the directcontent div on  dbl click on it
-
-  // $('.d-div').dblclick(function() {
-  //   let directcontent = $(this).children()[1]
-  //   let icon = $(this).children()[0]
-  //   if ($(icon).hasClass('hidePREV')) {
-  //     $(directcontent).css({ height: "2px" });
-  //     $(icon).removeClass('hidePREV')
-  //   }
-  //   else{
-  //     $(directcontent).css({ height: directcontent.scrollHeight + "px" });
-  //     $(icon).addClass('hidePREV')
-  //   }
-  // })
-
   setTimeout(() => {
     $(".doContact").css({ display: "inline-block" });
   }, 10000);
@@ -111,7 +96,7 @@ $(document).ready(() => {
     let contformoffset = $(".contactform")[0].offsetTop;
     //  directcontact  section animation
     if (scrolled >= directcontoffset - windowheight) {
-      $(".directcontact").css({ transform: "translateY(-100px)" });
+      $(".directcontact").css({ transform: "translateY(0px)" });
     } else {
       $(".directcontact").css({ transform: "translateY(100px)" });
     }
@@ -243,9 +228,7 @@ $(document).ready(() => {
       $(memberinfo).css("width", width);
     }
   });
-  $(".memberinfomodal .modal-header .btn-close").click(function () {
-    $(".memberinfomodal").css({ display: "none" });
-  });
+  
 
   // members information object
   let members = [
@@ -295,12 +278,33 @@ $(document).ready(() => {
 
   $(".memberMorebtn").click(function () {
     let memberNum = $($(this).parent().parent()[0]).attr("data-member");
-    let memberInfo = members[memberNum];
-    $(".member_Profile").attr("src", memberInfo.profile);
-    $(".member_Name").text(memberInfo.name);
-    $(".member_Work").text(memberInfo.profession);
-    $(".member_Email").text(memberInfo.email);
-    $(".member_Mobile").text(memberInfo.mobile);
+    let mi = members[memberNum];
+    $(".member_Profile").attr("src", mi.profile);
+    $(".member_Name").text(mi.name);
+    $(".member_Work").text(mi.profession);
+    $(".member_Email").text(mi.email);
+    $(".member_Mobile").text(mi.mobile);
     $(".memberinfomodal").css({ display: "grid" });
   });
+
+  $(".memberinfomodal .modal-header .btn-close").click(function () {
+    $(".memberinfomodal").css({ display: "none" });
+  });
+  // select2
+  $(".myselect").select2({
+    theme: "classic",
+    tags: true,
+    // minimumResultsForSearch: Infinity,
+    width:'250px',
+    scrollAfterSelect:true,
+  });
+  $(".myselect-Multi").select2({
+    placeholder: 'Select cities you visited',
+    allowClear: true,
+    maximumSelectionLength: 3,
+    tags: true,
+    // disabled:true,
+  });
+
+  
 });
