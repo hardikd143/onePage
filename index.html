@@ -193,7 +193,8 @@
                </form>
 
             </div>         
-            <h1 id="h1Editable">This editable Text made with tinymce</h1>
+            <h1 id="h1Editable" class="mt-5">This editable heading </h1>
+            <div id="divEditable" class="mt-5">This is editable Paragraph , you can edit this whole . Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, repudiandae corporis labore sint facilis recusandae ipsa accusamus eligendi, velit asperiores rem eaque quo soluta consequatur. Ipsa at inventore dignissimos quas blanditiis! Officiis quas, vel ratione maxime id assumenda obcaecati, animi architecto magni eaque eius laborum deleniti officia quos, commodi labore.</div>
          </div>
       </section>
       <!-- about section ends here  -->
@@ -683,6 +684,10 @@
             tinycomments_mode: 'embedded',
             tinycomments_author: 'Author name',
             a11y_advanced_options: true,
+         })
+         tinymce.init({
+            selector:'#h1Editable , #divEditable',
+            inline:true,
          })
       </script>
    </body>
