@@ -504,3 +504,18 @@ background: repeating-linear-gradient( 45deg, #ff9e9e, #ff9e9e 5px, #fff 15px, #
   display: grid;
   place-items: start;
 }
+
+.cke_chrome{
+  border-radius: 4px;
+}
+.cke_chrome , .cke_top , .cke_bottom{
+  border-color: #eff3ff !important;
+}
+.cke_button:hover{
+background: rgb(255, 255, 255) !important;
+border-color: #eff3ff !important;
+border-radius: 4px !important;
+}
+.cke_button_icon{
+  filter: invert(0.4);
+}
