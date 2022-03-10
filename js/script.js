@@ -305,6 +305,9 @@ $(document).ready(() => {
     tags: true,
     // disabled:true,
   });
-
+  let cal = new FullCalendar.Calendar($('.myCalendar'), {
+    initialView: 'dayGridMonth'
+  });
+  cal.render();
   
 });
