@@ -1189,11 +1189,11 @@
          // ClassicEditor.create( document.querySelector( '#ckeditorExample' ).then( editor => {console.log( editor );})
          // CKEDITOR.replace( 'ckeditorExample' ); 
          CKEDITOR.replace( 'ckeditorExample',{
-    uiColor: '#eff3ff',
-    removeButtons: 'PasteFromWord',
-    // removeButtons: 'Underline,Strike,Subscript,Superscript,Anchor,Styles,Specialchar,PasteFromWord'
+         uiColor: '#eff3ff',
+         removeButtons: 'PasteFromWord',
+         // removeButtons: 'Underline,Strike,Subscript,Superscript,Anchor,Styles,Specialchar,PasteFromWord'
 
-    toolbarGroups: [
+         toolbarGroups: [
             {
               "name": "basicstyles",
               "groups": ["basicstyles"]
@@ -1219,7 +1219,11 @@
             //   "groups": ["styles"]
             // }
           ],
-  });      
+         });      
+         let cal = new FullCalendar.Calendar($('.myCalendar'), {
+            initialView: 'dayGridMonth'
+         });
+         cal.render();
       </script>
    </body>
 </html>
